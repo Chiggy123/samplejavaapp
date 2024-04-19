@@ -8,7 +8,7 @@ pipeline {
 		sh script: '/opt/maven/bin/mvn compile'
            }
         }
-        stage('codereview-pmd') {
+        stage('configure-pmd') {
 	   steps {
                 echo 'configure..'
 		sh script: '/opt/maven/bin/mvn -P metrics pmd:pmd'
